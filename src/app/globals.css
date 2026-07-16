@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rtc-navy: #0b1d3a;
+  --color-rtc-navy-dark: #071225;
+  --color-rtc-green: #76b82a;
+  --color-rtc-blue: #0084c8;
+  --color-rtc-blue-dark: #006094;
+  --color-rtc-charcoal: #2a3441;
+  --color-rtc-light: #f4f7f9;
+  
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #2a3441;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #071225;
+    --foreground: #f4f7f9;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(118, 184, 42, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(118, 184, 42, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .bg-circuit-pattern {
+    background-image: radial-gradient(rgba(0, 132, 200, 0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
+  }
+}
