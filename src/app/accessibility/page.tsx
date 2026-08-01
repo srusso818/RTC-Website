@@ -25,7 +25,7 @@ export default function AccessibilityPage() {
 
         <h2 className="text-2xl font-bold text-[var(--color-rtc-navy)] mt-10 mb-4">Feedback</h2>
         <p>
-          If you encounter any accessibility barriers on our website, please let us know so we can address the issue. You can contact us via email at <a href={`mailto:${siteConfig.contact.email}`} className="text-[var(--color-rtc-blue)] underline">{siteConfig.contact.email}</a>.
+          If you encounter any accessibility barriers on our website, please let us know so we can address the issue. You can reach out to us via the contact form on our website.
         </p>
       </div>
     </div>

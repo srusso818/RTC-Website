@@ -45,8 +45,6 @@ export default function RootLayout({
               "name": siteConfig.name,
               "url": siteConfig.url,
               "logo": `${siteConfig.url}/logo.png`,
-              "telephone": siteConfig.contact.phone,
-              "email": siteConfig.contact.email,
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Prairie Grove",

@@ -6,8 +6,6 @@ export const siteConfig = {
   contact: {
     name: "Stephen Russo",
     title: "Owner & Senior Technology Consultant",
-    phone: "(479) 957-0455",
-    email: "stephen@russotc.com",
     address: "Prairie Grove, Arkansas",
     serviceArea: "Serving Northwest Arkansas and nationwide",
     hours: "Monday - Friday, 8:00 AM - 5:00 PM", // Placeholder, adjust as needed

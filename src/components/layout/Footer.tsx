@@ -43,12 +43,6 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-[var(--color-rtc-green)]">Contact</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>{siteConfig.contact.phone}</li>
-              <li>
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors">
-                  {siteConfig.contact.email}
-                </a>
-              </li>
               <li className="mt-4">
                 <Link href="/contact" className="text-[var(--color-rtc-blue)] hover:text-white transition-colors underline underline-offset-4">
                   Request a Consultation

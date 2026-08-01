@@ -44,28 +44,6 @@ export default function ContactPage() {
                     <p className="text-gray-500 text-sm mt-1">{siteConfig.contact.serviceArea}</p>
                   </div>
                 </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-rtc-light)] flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-[var(--color-rtc-blue)]" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[var(--color-rtc-navy-dark)]">Phone</h4>
-                    <p className="text-gray-600">{siteConfig.contact.phone}</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-rtc-light)] flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-[var(--color-rtc-blue)]" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[var(--color-rtc-navy-dark)]">Email</h4>
-                    <a href={`mailto:${siteConfig.contact.email}`} className="text-[var(--color-rtc-blue)] hover:underline">
-                      {siteConfig.contact.email}
-                    </a>
-                  </div>
-                </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-[var(--color-rtc-light)] flex items-center justify-center flex-shrink-0">

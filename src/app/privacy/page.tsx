@@ -46,12 +46,12 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-2xl font-bold text-[var(--color-rtc-navy)] mt-10 mb-4">Your Rights</h2>
         <p>
-          You may request to review, update, or delete the personal information we hold about you by contacting us at {siteConfig.contact.email}.
+          You may request to review, update, or delete the personal information we hold about you by contacting us via the contact form on our website.
         </p>
 
         <h2 className="text-2xl font-bold text-[var(--color-rtc-navy)] mt-10 mb-4">Contact Us</h2>
         <p>
-          If you have questions regarding this Privacy Policy, please contact us via email at {siteConfig.contact.email} or by mail at {siteConfig.contact.address}.
+          If you have questions regarding this Privacy Policy, please contact us via the contact form on our website or by mail at {siteConfig.contact.address}.
         </p>
       </div>
     </div>

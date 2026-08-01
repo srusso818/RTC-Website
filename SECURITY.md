@@ -5,7 +5,7 @@ This website is a static Next.js export. We strive to keep our Node modules and 
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability within this project, please send an e-mail to Stephen Russo at **stephen@russotc.com**. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project, please report it via the contact form on our website at https://russotc.com/contact. All security vulnerabilities will be promptly addressed.
 
 Please include:
 * A description of the vulnerability
