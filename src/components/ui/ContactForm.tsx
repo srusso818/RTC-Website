@@ -16,6 +16,11 @@ export function ContactForm() {
     setStatus("submitting");
     const formData = new FormData(e.currentTarget);
     
+    // Add Web3Forms access key
+    if (siteConfig.form.web3formsKey) {
+      formData.append("access_key", siteConfig.form.web3formsKey);
+    }
+    
     try {
       const response = await fetch(siteConfig.form.endpoint, {
         method: "POST",
@@ -56,33 +61,33 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name <span className="text-red-500">*</span></label>
-          <input required type="text" id="name" name="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <input required type="text" id="name" name="name" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company or Organization</label>
-          <input type="text" id="company" name="company" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <input type="text" id="company" name="company" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email <span className="text-red-500">*</span></label>
-          <input required type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <input required type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-          <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="preferredContact" className="block text-sm font-medium text-gray-700 mb-1">Preferred Contact Method</label>
-          <select id="preferredContact" name="preferredContact" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none bg-white transition-colors">
+          <select id="preferredContact" name="preferredContact" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors">
             <option value="Email">Email</option>
             <option value="Phone">Phone</option>
           </select>
         </div>
         <div>
           <label htmlFor="serviceNeeded" className="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
-          <select id="serviceNeeded" name="serviceNeeded" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none bg-white transition-colors">
+          <select id="serviceNeeded" name="serviceNeeded" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors">
             <option value="">Select a service...</option>
             <option value="IT Consulting">IT Consulting</option>
             <option value="Managed IT Support">Managed IT Support</option>
@@ -101,7 +106,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message <span className="text-red-500">*</span></label>
-        <textarea required id="message" name="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none resize-y transition-colors"></textarea>
+        <textarea required id="message" name="message" rows={5} className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none resize-y transition-colors"></textarea>
       </div>
 
       <div className="flex items-start">

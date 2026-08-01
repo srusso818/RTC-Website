@@ -14,7 +14,8 @@ export const siteConfig = {
   },
   form: {
     // Document how to set up the form, e.g., Formspree or Web3Forms
-    endpoint: process.env.NEXT_PUBLIC_FORM_ENDPOINT || "",
+    endpoint: process.env.NEXT_PUBLIC_FORM_ENDPOINT || "https://api.web3forms.com/submit",
+    web3formsKey: "431bc8cc-1e07-4195-9cb8-1d41508a8121",
   },
   social: {
     // Add placeholders for future use
