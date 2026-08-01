@@ -43,19 +43,25 @@ export function AnimatedCircuitBackground() {
     class Spark {
       x: number;
       y: number;
-      vx: number;
-      vy: number;
+      vx: number = 0;
+      vy: number = 0;
       color: string;
+      isDead: boolean = false;
+      drawPad: boolean = false;
 
       constructor() {
         this.color = Math.random() > 0.5 ? "#0084c8" : "#76b82a"; // Blue or Green
         // Start on a grid intersection
         this.x = Math.floor(Math.random() * (width / GRID_SIZE)) * GRID_SIZE;
         this.y = Math.floor(Math.random() * (height / GRID_SIZE)) * GRID_SIZE;
-        
-        // Random initial direction
+        this.pickNewDirection();
+      }
+
+      pickNewDirection() {
+        // Orthogonal and Diagonal (45-degree) directions
         const dirs = [
-          [SPEED, 0], [-SPEED, 0], [0, SPEED], [0, -SPEED]
+          [SPEED, 0], [-SPEED, 0], [0, SPEED], [0, -SPEED], 
+          [SPEED, SPEED], [SPEED, -SPEED], [-SPEED, SPEED], [-SPEED, -SPEED]
         ];
         const dir = dirs[Math.floor(Math.random() * dirs.length)];
         this.vx = dir[0];
@@ -63,45 +69,67 @@ export function AnimatedCircuitBackground() {
       }
 
       update() {
+        if (this.isDead) {
+          // Respawn after being dead for a frame (to allow the pad to be drawn)
+          this.isDead = false;
+          this.drawPad = false;
+          this.x = Math.floor(Math.random() * (width / GRID_SIZE)) * GRID_SIZE;
+          this.y = Math.floor(Math.random() * (height / GRID_SIZE)) * GRID_SIZE;
+          this.color = Math.random() > 0.5 ? "#0084c8" : "#76b82a";
+          this.pickNewDirection();
+          return;
+        }
+
         this.x += this.vx;
         this.y += this.vy;
 
-        // Check if we hit an intersection
+        // Check if we hit a grid intersection
         if (this.x % GRID_SIZE === 0 && this.y % GRID_SIZE === 0) {
           const outOfBounds = this.x < 0 || this.x > width || this.y < 0 || this.y > height;
           
-          if (Math.random() < 0.35 || outOfBounds) { // 35% chance to turn at intersection
-            if (outOfBounds) {
-              // Respawn somewhere else inside
-              this.x = Math.floor(Math.random() * (width / GRID_SIZE)) * GRID_SIZE;
-              this.y = Math.floor(Math.random() * (height / GRID_SIZE)) * GRID_SIZE;
-            } else {
-              // Turn 90 degrees
-              if (this.vx !== 0) { // moving horizontally, turn vertically
-                this.vy = Math.random() > 0.5 ? SPEED : -SPEED;
-                this.vx = 0;
-              } else { // moving vertically, turn horizontally
-                this.vx = Math.random() > 0.5 ? SPEED : -SPEED;
-                this.vy = 0;
-              }
-            }
+          if (outOfBounds) {
+             this.isDead = true;
+          } else if (Math.random() < 0.08) { 
+             // 8% chance to stop and form a circular pad (via)
+             this.isDead = true;
+             this.drawPad = true;
+          } else if (Math.random() < 0.35) {
+             // 35% chance to change direction
+             this.pickNewDirection();
           }
         }
       }
 
       draw(ctx: CanvasRenderingContext2D) {
-        ctx.beginPath();
-        // Draw a short trailing line to make it look like a spark
-        ctx.moveTo(this.x - this.vx * 3, this.y - this.vy * 3);
-        ctx.lineTo(this.x, this.y);
-        ctx.strokeStyle = this.color;
-        ctx.lineWidth = 2;
-        ctx.lineCap = "round";
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = this.color;
-        ctx.stroke();
-        
-        ctx.shadowBlur = 0; // Reset for performance
+        if (this.drawPad) {
+           // Draw inner solid circle
+           ctx.beginPath();
+           ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+           ctx.fillStyle = this.color;
+           ctx.shadowBlur = 10;
+           ctx.shadowColor = this.color;
+           ctx.fill();
+           ctx.shadowBlur = 0;
+           
+           // Draw outer hollow circle to look like a PCB via
+           ctx.beginPath();
+           ctx.arc(this.x, this.y, 6, 0, Math.PI * 2);
+           ctx.strokeStyle = this.color;
+           ctx.lineWidth = 1.5;
+           ctx.stroke();
+        } else if (!this.isDead) {
+           ctx.beginPath();
+           // Draw a short trailing line to make it look like a spark
+           ctx.moveTo(this.x - this.vx * 3, this.y - this.vy * 3);
+           ctx.lineTo(this.x, this.y);
+           ctx.strokeStyle = this.color;
+           ctx.lineWidth = 2;
+           ctx.lineCap = "round";
+           ctx.shadowBlur = 8;
+           ctx.shadowColor = this.color;
+           ctx.stroke();
+           ctx.shadowBlur = 0; // Reset for performance
+        }
       }
     }
 
