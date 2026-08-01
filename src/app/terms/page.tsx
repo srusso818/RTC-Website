@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfUsePage() {
   return (
-    <div className="container mx-auto px-8 py-20 max-w-4xl min-h-screen relative z-10 bg-green-950/70 backdrop-blur-md border-x border-green-500/20">
+    <div className="container mx-auto px-8 py-20 max-w-4xl min-h-screen relative z-10 bg-black/40 backdrop-blur-sm rounded-xl mt-12 mb-12 border-x border-white/5">
       <h1 className="text-4xl font-bold text-white mb-8">Terms of Use</h1>
       
       <div className="prose prose-lg text-gray-300 prose-headings:text-white prose-p:text-gray-300 max-w-none">

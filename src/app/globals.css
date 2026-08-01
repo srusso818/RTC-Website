@@ -1,27 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-  --color-rtc-navy: #022c16;
-  --color-rtc-navy-dark: #011f0f;
-  --color-rtc-green: #4ade80;
-  --color-rtc-blue: #22c55e; /* Now functioning as neon green */
-  --color-rtc-blue-dark: #16a34a;
-  --color-rtc-charcoal: #052e16;
-  --color-rtc-light: #f0fdf4;
+  --color-rtc-navy: #062f1c;
+  --color-rtc-navy-dark: #021a0e;
+  --color-rtc-green: #34d399; /* Emerald 400 */
+  --color-rtc-blue: #10b981; /* Emerald 500 */
+  --color-rtc-blue-dark: #047857;
+  --color-rtc-charcoal: #064e3b;
+  --color-rtc-light: #ecfdf5;
   
   --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #2a3441;
+  --background: #ecfdf5;
+  --foreground: #021a0e;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #071225;
-    --foreground: #f4f7f9;
+    --background: transparent; /* Changed from solid to let layout bg show */
+    --foreground: #ecfdf5;
   }
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.45); /* Sleek dark slate/navy */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle white border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -47,4 +55,23 @@ body {
     background-image: radial-gradient(rgba(0, 132, 200, 0.1) 2px, transparent 2px);
     background-size: 30px 30px;
   }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(2, 26, 14, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.7);
 }
