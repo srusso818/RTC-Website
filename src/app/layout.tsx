@@ -57,6 +57,10 @@ export default function RootLayout({
           }}
         />
         <Header />
+        <div 
+          className="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat opacity-90"
+          style={{ backgroundImage: "url('/486.png')", backgroundColor: "#0b1d3a" }}
+        ></div>
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

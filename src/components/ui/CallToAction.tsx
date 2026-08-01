@@ -2,9 +2,8 @@ import { Button } from "./Button";
 
 export function CallToAction() {
   return (
-    <section className="bg-[var(--color-rtc-navy)] py-20 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-circuit-pattern opacity-10"></div>
+    <section className="bg-[#0b1d3a]/60 backdrop-blur-md border-t border-white/10 py-20 relative overflow-hidden">
+      {/* Background is now global in layout */}
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Let’s Discuss Your Technology Goals</h2>

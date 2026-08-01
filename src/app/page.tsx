@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AnimatedCircuitBackground } from "@/components/ui/AnimatedCircuitBackground";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -13,8 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-[var(--color-rtc-navy)] text-white pt-24 pb-32 overflow-hidden">
-        <AnimatedCircuitBackground />
+      <section className="relative bg-[#0b1d3a]/60 backdrop-blur-md text-white pt-24 pb-32 overflow-hidden border-b border-white/10">
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-[var(--color-rtc-blue)] opacity-20 blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -38,7 +36,7 @@ export default function Home() {
       </section>
 
       {/* Trust and Experience Highlights */}
-      <section className="bg-[var(--color-rtc-blue-dark)] py-8 shadow-inner">
+      <section className="bg-white/5 backdrop-blur-md border-y border-white/10 py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-white font-medium text-center">
             <div className="flex items-center gap-2">
@@ -66,24 +64,24 @@ export default function Home() {
       </section>
 
       {/* Introductory Section */}
-      <section className="py-24 bg-white relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
+      <section className="py-24 bg-[#0b1d3a]/60 backdrop-blur-md border-b border-white/10 relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
           <SectionHeading 
             title="Technology Experience That Goes Beyond Basic IT Support" 
             centered 
           />
-          <p className="text-xl text-gray-700 leading-relaxed mb-6 text-balance">
+          <p className="text-xl text-gray-200 leading-relaxed mb-6 text-balance">
             RTC provides senior-level technology guidance based on decades of experience across financial services, enterprise infrastructure, and government IT. 
           </p>
-          <p className="text-lg text-gray-600 leading-relaxed text-balance">
+          <p className="text-lg text-gray-300 leading-relaxed text-balance">
             We believe organizations shouldn't have to navigate complex technology decisions alone. When you partner with RTC, you work directly with an experienced technology professional—not a junior technician or a rotating helpdesk staff. We bring enterprise-level knowledge and practical solutions to organizations that may not have enterprise-level budgets.
           </p>
         </div>
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 bg-[var(--color-rtc-light)]">
+      <section className="py-24 bg-transparent relative z-10">
         <div className="container mx-auto px-4">
           <SectionHeading title="Core Capabilities" subtitle="Strategic technology consulting and practical engineering solutions for modern organizations." centered />
           
@@ -147,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose RTC */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#0b1d3a]/60 backdrop-blur-md border-y border-white/10 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto mb-16">
             <SectionHeading title="Enterprise Experience Without Enterprise Overhead" />
@@ -156,49 +154,49 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-5xl mx-auto">
             <div className="flex gap-4">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/20 border border-[var(--color-rtc-blue)]/30 flex items-center justify-center">
                   <span className="text-[var(--color-rtc-blue)] font-bold">1</span>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[var(--color-rtc-navy-dark)] mb-2">More Than 25 Years of Experience</h3>
-                <p className="text-gray-600">Decades of hands-on technology experience across financial services, hedge fund operations, enterprise infrastructure, and government environments.</p>
+                <h3 className="text-xl font-bold text-white mb-2">More Than 25 Years of Experience</h3>
+                <p className="text-gray-300">Decades of hands-on technology experience across financial services, hedge fund operations, enterprise infrastructure, and government environments.</p>
               </div>
             </div>
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/20 border border-[var(--color-rtc-blue)]/30 flex items-center justify-center">
                   <span className="text-[var(--color-rtc-blue)] font-bold">2</span>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[var(--color-rtc-navy-dark)] mb-2">Direct Access to Senior Expertise</h3>
-                <p className="text-gray-600">Clients work directly with an experienced systems engineer and technology consultant, avoiding the frustration of tiered support systems.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Direct Access to Senior Expertise</h3>
+                <p className="text-gray-300">Clients work directly with an experienced systems engineer and technology consultant, avoiding the frustration of tiered support systems.</p>
               </div>
             </div>
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/20 border border-[var(--color-rtc-blue)]/30 flex items-center justify-center">
                   <span className="text-[var(--color-rtc-blue)] font-bold">3</span>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[var(--color-rtc-navy-dark)] mb-2">Enterprise Knowledge for Smaller Organizations</h3>
-                <p className="text-gray-600">RTC applies enterprise-grade planning and security principles in ways that are practical and affordable for smaller organizations.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Enterprise Knowledge for Smaller Organizations</h3>
+                <p className="text-gray-300">RTC applies enterprise-grade planning and security principles in ways that are practical and affordable for smaller organizations.</p>
               </div>
             </div>
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[var(--color-rtc-blue)]/20 border border-[var(--color-rtc-blue)]/30 flex items-center justify-center">
                   <span className="text-[var(--color-rtc-blue)] font-bold">4</span>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[var(--color-rtc-navy-dark)] mb-2">Practical, Honest Recommendations</h3>
-                <p className="text-gray-600">We recommend technology based on business needs, risk, budget, and long-term value rather than pushing unnecessary complexity.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Practical, Honest Recommendations</h3>
+                <p className="text-gray-300">We recommend technology based on business needs, risk, budget, and long-term value rather than pushing unnecessary complexity.</p>
               </div>
             </div>
           </div>
