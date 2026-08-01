@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-[#0b1d3a]/60 backdrop-blur-md text-white pt-24 pb-32 overflow-hidden border-b border-white/10">
+      <section className="relative bg-green-950/70 backdrop-blur-md text-white pt-24 pb-32 overflow-hidden border-b border-green-500/20">
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-[var(--color-rtc-blue)] opacity-20 blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -36,7 +36,7 @@ export default function Home() {
       </section>
 
       {/* Trust and Experience Highlights */}
-      <section className="bg-white/5 backdrop-blur-md border-y border-white/10 py-8">
+      <section className="bg-white/5 backdrop-blur-md border-y border-green-500/20 py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-white font-medium text-center">
             <div className="flex items-center gap-2">
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* Introductory Section */}
-      <section className="py-24 bg-[#0b1d3a]/60 backdrop-blur-md border-b border-white/10 relative">
+      <section className="py-24 bg-green-950/70 backdrop-blur-md border-b border-green-500/20 relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
           <SectionHeading 
@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose RTC */}
-      <section className="py-24 bg-[#0b1d3a]/60 backdrop-blur-md border-y border-white/10 relative z-10">
+      <section className="py-24 bg-green-950/70 backdrop-blur-md border-y border-green-500/20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto mb-16">
             <SectionHeading title="Enterprise Experience Without Enterprise Overhead" />
