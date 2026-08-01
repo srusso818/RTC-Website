@@ -43,10 +43,10 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-green-50 border border-green-200 text-green-800 p-8 rounded-lg text-center">
+      <div className="bg-green-950/80 backdrop-blur-md border border-green-500/50 text-white p-8 rounded-lg text-center shadow-[0_0_15px_rgba(34,197,94,0.3)]">
         <h3 className="text-2xl font-bold mb-2">Message Sent Successfully</h3>
-        <p className="mb-6">Thank you for reaching out. We will review your request and get back to you shortly.</p>
-        <Button onClick={() => setStatus("idle")} variant="outline" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white">
+        <p className="mb-6 text-gray-300">Thank you for reaching out. We will review your request and get back to you shortly.</p>
+        <Button onClick={() => setStatus("idle")} variant="outline" className="border-[var(--color-rtc-blue)] text-[var(--color-rtc-blue)] hover:bg-[var(--color-rtc-blue)] hover:text-white">
           Send Another Message
         </Button>
       </div>
@@ -60,64 +60,64 @@ export function ContactForm() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name <span className="text-red-500">*</span></label>
-          <input required type="text" id="name" name="name" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white text-black rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <label htmlFor="name" className="block text-sm font-medium text-[var(--color-rtc-blue)] mb-1">Name <span className="text-red-500">*</span></label>
+          <input required type="text" id="name" name="name" className="w-full px-4 py-2 border border-green-500/30 bg-green-950/50 text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company or Organization</label>
-          <input type="text" id="company" name="company" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white text-black rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <label htmlFor="company" className="block text-sm font-medium text-[var(--color-rtc-blue)] mb-1">Company or Organization</label>
+          <input type="text" id="company" name="company" className="w-full px-4 py-2 border border-green-500/30 bg-green-950/50 text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email <span className="text-red-500">*</span></label>
-          <input required type="email" id="email" name="email" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white text-black rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <label htmlFor="email" className="block text-sm font-medium text-[var(--color-rtc-blue)] mb-1">Email <span className="text-red-500">*</span></label>
+          <input required type="email" id="email" name="email" className="w-full px-4 py-2 border border-green-500/30 bg-green-950/50 text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-          <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white text-black rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
+          <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-rtc-blue)] mb-1">Phone</label>
+          <input type="tel" id="phone" name="phone" className="w-full px-4 py-2 border border-green-500/30 bg-green-950/50 text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors" />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="preferredContact" className="block text-sm font-medium text-gray-700 mb-1">Preferred Contact Method</label>
-          <select id="preferredContact" name="preferredContact" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white text-black rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors">
-            <option value="Email">Email</option>
-            <option value="Phone">Phone</option>
+          <label htmlFor="preferredContact" className="block text-sm font-medium text-[var(--color-rtc-blue)] mb-1">Preferred Contact Method</label>
+          <select id="preferredContact" name="preferredContact" className="w-full px-4 py-2 border border-green-500/30 bg-green-950/50 text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors">
+            <option value="Email" className="bg-[#022c16]">Email</option>
+            <option value="Phone" className="bg-[#022c16]">Phone</option>
           </select>
         </div>
         <div>
-          <label htmlFor="serviceNeeded" className="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
-          <select id="serviceNeeded" name="serviceNeeded" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white text-black rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors">
-            <option value="">Select a service...</option>
-            <option value="IT Consulting">IT Consulting</option>
-            <option value="Managed IT Support">Managed IT Support</option>
-            <option value="Cybersecurity">Cybersecurity</option>
-            <option value="Microsoft 365">Microsoft 365</option>
-            <option value="Networking">Networking</option>
-            <option value="Servers and Virtualization">Servers and Virtualization</option>
-            <option value="Backup and Disaster Recovery">Backup and Disaster Recovery</option>
-            <option value="Mobile Device Management">Mobile Device Management</option>
-            <option value="Website Services">Website Services</option>
-            <option value="Technology Project">Technology Project</option>
-            <option value="Other">Other</option>
+          <label htmlFor="serviceNeeded" className="block text-sm font-medium text-[var(--color-rtc-blue)] mb-1">Service Needed</label>
+          <select id="serviceNeeded" name="serviceNeeded" className="w-full px-4 py-2 border border-green-500/30 bg-green-950/50 text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none transition-colors">
+            <option value="" className="bg-[#022c16]">Select a service...</option>
+            <option value="IT Consulting" className="bg-[#022c16]">IT Consulting</option>
+            <option value="Managed IT Support" className="bg-[#022c16]">Managed IT Support</option>
+            <option value="Cybersecurity" className="bg-[#022c16]">Cybersecurity</option>
+            <option value="Microsoft 365" className="bg-[#022c16]">Microsoft 365</option>
+            <option value="Networking" className="bg-[#022c16]">Networking</option>
+            <option value="Servers and Virtualization" className="bg-[#022c16]">Servers and Virtualization</option>
+            <option value="Backup and Disaster Recovery" className="bg-[#022c16]">Backup and Disaster Recovery</option>
+            <option value="Mobile Device Management" className="bg-[#022c16]">Mobile Device Management</option>
+            <option value="Website Services" className="bg-[#022c16]">Website Services</option>
+            <option value="Technology Project" className="bg-[#022c16]">Technology Project</option>
+            <option value="Other" className="bg-[#022c16]">Other</option>
           </select>
         </div>
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message <span className="text-red-500">*</span></label>
-        <textarea required id="message" name="message" rows={5} className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white text-black rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none resize-y transition-colors"></textarea>
+        <label htmlFor="message" className="block text-sm font-medium text-[var(--color-rtc-blue)] mb-1">Message <span className="text-red-500">*</span></label>
+        <textarea required id="message" name="message" rows={5} className="w-full px-4 py-2 border border-green-500/30 bg-green-950/50 text-white rounded-md focus:ring-2 focus:ring-[var(--color-rtc-blue)] focus:border-[var(--color-rtc-blue)] outline-none resize-y transition-colors"></textarea>
       </div>
 
       <div className="flex items-start">
-        <input required type="checkbox" id="consent" name="consent" className="mt-1 mr-3 h-4 w-4 text-[var(--color-rtc-blue)] border-gray-300 rounded focus:ring-2 focus:ring-[var(--color-rtc-blue)]" />
-        <label htmlFor="consent" className="text-sm text-gray-600 leading-relaxed">
+        <input required type="checkbox" id="consent" name="consent" className="mt-1 mr-3 h-4 w-4 text-[var(--color-rtc-blue)] bg-green-950/50 border-green-500/30 rounded focus:ring-2 focus:ring-[var(--color-rtc-blue)]" />
+        <label htmlFor="consent" className="text-sm text-gray-400 leading-relaxed">
           I consent to being contacted by Russo Technology Consulting regarding my inquiry. Submitting this form does not create a client relationship or guarantee immediate support.
         </label>
       </div>
 
       {status === "error" && (
-        <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-md text-sm">
+        <div className="bg-red-950/80 backdrop-blur-md border border-red-500/50 text-white p-4 rounded-md text-sm shadow-[0_0_15px_rgba(239,68,68,0.3)]">
           There was an error sending your message. Please verify your connection or try again later. If the problem persists, please email us directly.
         </div>
       )}
