@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AnimatedCircuitBackground } from "@/components/ui/AnimatedCircuitBackground";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -13,7 +14,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-[var(--color-rtc-navy)] text-white pt-24 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-circuit-pattern opacity-20"></div>
+        <AnimatedCircuitBackground />
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-[var(--color-rtc-blue)] opacity-20 blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
