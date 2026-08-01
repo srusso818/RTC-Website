@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CallToAction } from "@/components/ui/CallToAction";
+import { InteractiveCard } from "@/components/ui/InteractiveCard";
 
 export const metadata: Metadata = {
   title: "Industries Served",
@@ -42,27 +43,29 @@ export default function IndustriesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-green-950/70 backdrop-blur-md text-white py-20 border-b border-green-500/20 relative overflow-hidden">
+      <section className="bg-black/20 text-white py-20 border-b border-white/5 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries We Serve</h1>
-          <p className="text-xl text-gray-300">
-            RTC applies enterprise-grade planning and security principles in ways that are practical and affordable across diverse sectors.
-          </p>
+          <div className="bg-slate-950/60 backdrop-blur-md inline-block p-8 md:p-12 rounded-2xl border border-white/5">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries We Serve</h1>
+            <p className="text-xl text-gray-300">
+              RTC applies enterprise-grade planning and security principles in ways that are practical and affordable across diverse sectors.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Industries Grid */}
-      <section className="py-24 bg-green-950/70 backdrop-blur-md border-b border-green-500/20">
+      <section className="py-24 bg-black/20 border-b border-white/5">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="bg-green-950/70 backdrop-blur-md rounded-xl p-8 shadow-lg border border-green-500/20 hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:border-green-500 transition-all">
-                <div className="w-12 h-1 bg-[var(--color-rtc-green)] mb-6"></div>
-                <h2 className="text-2xl font-bold text-white mb-4">{industry.title}</h2>
-                <p className="text-gray-300 leading-relaxed">
+              <InteractiveCard key={index} className="bg-slate-950/60 backdrop-blur-md rounded-xl p-8 shadow-lg border border-white/5 hover:shadow-lg hover:border-white/20 transition-all">
+                <div style={{ transform: "translateZ(30px)" }} className="w-12 h-1 bg-[var(--color-rtc-blue)] mb-6"></div>
+                <h2 style={{ transform: "translateZ(20px)" }} className="text-2xl font-bold text-white mb-4">{industry.title}</h2>
+                <p style={{ transform: "translateZ(10px)" }} className="text-gray-300 leading-relaxed">
                   {industry.description}
                 </p>
-              </div>
+              </InteractiveCard>
             ))}
           </div>
         </div>

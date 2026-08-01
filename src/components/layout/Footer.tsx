@@ -6,7 +6,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="bg-[var(--color-rtc-navy)] text-white border-t border-[var(--color-rtc-navy-dark)] mt-auto">
+    <footer className="bg-slate-950 text-white border-t border-white/5 mt-auto">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2 space-y-4">
@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[var(--color-rtc-green)]">Navigation</h3>
+            <h3 className="text-lg font-semibold mb-4 text-gray-200">Navigation</h3>
             <ul className="space-y-2">
               {siteConfig.mainNav.map((link) => (
                 <li key={link.href}>
@@ -41,10 +41,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[var(--color-rtc-green)]">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4 text-gray-200">Contact</h3>
             <ul className="space-y-2 text-gray-300">
               <li className="mt-4">
-                <Link href="/contact" className="text-[var(--color-rtc-blue)] hover:text-white transition-colors underline underline-offset-4">
+                <Link href="/contact" className="text-gray-200 hover:text-white transition-colors underline underline-offset-4">
                   Request a Consultation
                 </Link>
               </li>

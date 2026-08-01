@@ -2,7 +2,7 @@ import { Button } from "./Button";
 
 export function CallToAction() {
   return (
-    <section className="bg-green-950/70 backdrop-blur-md border-t border-green-500/20 py-20 relative overflow-hidden">
+    <section className="bg-black/20 border-t border-white/5 py-20 relative overflow-hidden">
       {/* Background is now global in layout */}
       
       <div className="container mx-auto px-4 text-center relative z-10">

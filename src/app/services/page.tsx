@@ -134,30 +134,32 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-green-950/70 backdrop-blur-md text-white py-20 border-b border-green-500/20">
+      <section className="bg-black/20 text-white py-20 border-b border-white/5">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-          <p className="text-xl text-gray-300">
-            Professional IT consulting, infrastructure engineering, and technical support designed for organizations that need enterprise-level guidance without enterprise overhead.
-          </p>
+          <div className="bg-slate-950/60 backdrop-blur-md inline-block p-8 md:p-12 rounded-2xl border border-white/5">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+            <p className="text-xl text-gray-300">
+              Professional IT consulting, infrastructure engineering, and technical support designed for organizations that need enterprise-level guidance without enterprise overhead.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Services List */}
-      <section className="py-20 bg-green-950/70 backdrop-blur-md border-b border-green-500/20">
+      <section className="py-20 bg-black/20 border-b border-white/5">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="space-y-24">
             {services.map((service, index) => (
               <div key={service.id} id={service.id} className="scroll-mt-24">
-                <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="flex flex-col md:flex-row gap-8 items-start bg-slate-950/60 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/5 shadow-lg shadow-black/20">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-xl bg-green-500/10 flex items-center justify-center shadow-lg border border-green-500/20">
+                    <div className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center shadow-lg border border-white/10">
                       <service.icon className="w-8 h-8 text-[var(--color-rtc-blue)]" />
                     </div>
                   </div>
                   <div className="flex-grow">
                     <h2 className="text-3xl font-bold text-white mb-4">{service.title}</h2>
-                    <p className="text-lg text-gray-300 mb-8 border-l-4 border-[var(--color-rtc-green)] pl-4 italic">
+                    <p className="text-lg text-gray-300 mb-8 border-l-4 border-[var(--color-rtc-blue)] pl-4 italic">
                       {service.description}
                     </p>
                     
@@ -172,7 +174,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 {index !== services.length - 1 && (
-                  <div className="h-px bg-green-500/20 mt-24"></div>
+                  <div className="h-px bg-white/5 mt-24"></div>
                 )}
               </div>
             ))}
