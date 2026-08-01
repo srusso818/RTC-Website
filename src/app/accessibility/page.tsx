@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 
 export default function AccessibilityPage() {
   return (
-    <div className="container mx-auto px-4 py-20 max-w-4xl min-h-screen">
-      <h1 className="text-4xl font-bold text-[var(--color-rtc-navy-dark)] mb-8">Accessibility Statement</h1>
+    <div className="container mx-auto px-8 py-20 max-w-4xl min-h-screen relative z-10 bg-green-950/70 backdrop-blur-md border-x border-green-500/20">
+      <h1 className="text-4xl font-bold text-white mb-8">Accessibility Statement</h1>
       
-      <div className="prose prose-lg text-gray-700 max-w-none">
+      <div className="prose prose-lg text-gray-300 prose-headings:text-white prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-white max-w-none">
         <p>
           Russo Technology Consulting, LLC is committed to making our website accessible to everyone, including individuals with disabilities. We strive to ensure our digital presence complies with the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards.
         </p>

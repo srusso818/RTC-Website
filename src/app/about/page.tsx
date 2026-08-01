@@ -24,7 +24,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-[var(--color-rtc-navy)] text-white py-20 border-b-4 border-[var(--color-rtc-blue)]">
+      <section className="bg-green-950/70 backdrop-blur-md text-white py-20 border-b border-green-500/20">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About {siteConfig.name}</h1>
           <p className="text-xl text-gray-300">
@@ -34,10 +34,10 @@ export default function AboutPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-green-950/70 backdrop-blur-md border-b border-green-500/20">
         <div className="container mx-auto px-4 max-w-4xl">
           <SectionHeading title="Company Overview" />
-          <div className="prose prose-lg text-gray-700 max-w-none">
+          <div className="prose prose-lg text-gray-300 prose-headings:text-white prose-p:text-gray-300 max-w-none">
             <p className="mb-6">
               Russo Technology Consulting was created to provide experienced, practical technology guidance to businesses and public organizations. We combine enterprise-level knowledge with responsive, personalized service.
             </p>
@@ -49,14 +49,14 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Biography */}
-      <section className="py-20 bg-[var(--color-rtc-light)]">
+      <section className="py-20 bg-green-950/70 backdrop-blur-md border-b border-green-500/20">
         <div className="container mx-auto px-4 max-w-4xl">
           <SectionHeading title="Founder Biography" />
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-12">
-            <h3 className="text-2xl font-bold text-[var(--color-rtc-navy-dark)] mb-2">Stephen Russo</h3>
+          <div className="bg-green-950/70 backdrop-blur-md rounded-xl shadow-lg border border-green-500/20 p-8 md:p-12">
+            <h3 className="text-2xl font-bold text-white mb-2">Stephen Russo</h3>
             <p className="text-[var(--color-rtc-blue)] font-semibold mb-6">Owner & Senior Technology Consultant</p>
             
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
                 Stephen Russo is an information technology professional with more than 25 years of experience across financial services, hedge fund technology, enterprise infrastructure, and county government.
               </p>
@@ -75,17 +75,17 @@ export default function AboutPage() {
       </section>
 
       {/* Principles */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-green-950/70 backdrop-blur-md border-b border-green-500/20">
         <div className="container mx-auto px-4 max-w-6xl">
           <SectionHeading title="Our Core Principles" centered />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {principles.map((principle, index) => (
-              <div key={index} className="text-center p-6 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 mx-auto bg-[var(--color-rtc-light)] rounded-full flex items-center justify-center mb-4">
+              <div key={index} className="text-center p-6 border border-green-500/20 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:border-green-500 transition-all bg-green-950/70 backdrop-blur-md">
+                <div className="w-16 h-16 mx-auto bg-green-500/10 rounded-full flex items-center justify-center mb-4">
                   <principle.icon className="w-8 h-8 text-[var(--color-rtc-blue)]" />
                 </div>
-                <h3 className="text-xl font-bold text-[var(--color-rtc-navy-dark)] mb-3">{principle.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{principle.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{principle.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{principle.description}</p>
               </div>
             ))}
           </div>

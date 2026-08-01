@@ -42,8 +42,7 @@ export default function IndustriesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-[var(--color-rtc-navy)] text-white py-20 border-b-4 border-[var(--color-rtc-blue)] relative overflow-hidden">
-        <div className="absolute inset-0 bg-circuit-pattern opacity-10"></div>
+      <section className="bg-green-950/70 backdrop-blur-md text-white py-20 border-b border-green-500/20 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries We Serve</h1>
           <p className="text-xl text-gray-300">
@@ -53,14 +52,14 @@ export default function IndustriesPage() {
       </section>
 
       {/* Industries Grid */}
-      <section className="py-24 bg-[var(--color-rtc-light)]">
+      <section className="py-24 bg-green-950/70 backdrop-blur-md border-b border-green-500/20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div key={index} className="bg-green-950/70 backdrop-blur-md rounded-xl p-8 shadow-lg border border-green-500/20 hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:border-green-500 transition-all">
                 <div className="w-12 h-1 bg-[var(--color-rtc-green)] mb-6"></div>
-                <h2 className="text-2xl font-bold text-[var(--color-rtc-navy-dark)] mb-4">{industry.title}</h2>
-                <p className="text-gray-600 leading-relaxed">
+                <h2 className="text-2xl font-bold text-white mb-4">{industry.title}</h2>
+                <p className="text-gray-300 leading-relaxed">
                   {industry.description}
                 </p>
               </div>

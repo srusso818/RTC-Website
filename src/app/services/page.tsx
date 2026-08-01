@@ -134,7 +134,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-[var(--color-rtc-navy-dark)] text-white py-20 border-b-4 border-[var(--color-rtc-green)]">
+      <section className="bg-green-950/70 backdrop-blur-md text-white py-20 border-b border-green-500/20">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
           <p className="text-xl text-gray-300">
@@ -144,20 +144,20 @@ export default function ServicesPage() {
       </section>
 
       {/* Services List */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-green-950/70 backdrop-blur-md border-b border-green-500/20">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="space-y-24">
             {services.map((service, index) => (
               <div key={service.id} id={service.id} className="scroll-mt-24">
                 <div className="flex flex-col md:flex-row gap-8 items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-xl bg-[var(--color-rtc-light)] flex items-center justify-center shadow-sm border border-gray-100">
+                    <div className="w-16 h-16 rounded-xl bg-green-500/10 flex items-center justify-center shadow-lg border border-green-500/20">
                       <service.icon className="w-8 h-8 text-[var(--color-rtc-blue)]" />
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <h2 className="text-3xl font-bold text-[var(--color-rtc-navy-dark)] mb-4">{service.title}</h2>
-                    <p className="text-lg text-gray-700 mb-8 border-l-4 border-[var(--color-rtc-green)] pl-4 italic">
+                    <h2 className="text-3xl font-bold text-white mb-4">{service.title}</h2>
+                    <p className="text-lg text-gray-300 mb-8 border-l-4 border-[var(--color-rtc-green)] pl-4 italic">
                       {service.description}
                     </p>
                     
@@ -165,14 +165,14 @@ export default function ServicesPage() {
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex items-start gap-2">
                           <CheckSquare className="w-5 h-5 text-[var(--color-rtc-blue)] flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-600">{feature}</span>
+                          <span className="text-gray-400">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
                 {index !== services.length - 1 && (
-                  <div className="h-px bg-gray-100 mt-24"></div>
+                  <div className="h-px bg-green-500/20 mt-24"></div>
                 )}
               </div>
             ))}
